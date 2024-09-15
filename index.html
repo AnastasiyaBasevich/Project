@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ram.css">
+    <link rel="stylesheet" href="normolise.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&display=swap"
+        rel="stylesheet">">
+</head>
+
+<body>
+    <script>
+
+
+
+        window.onload = function () {
+            const targets = [100, 75, 50, 25];
+            const duration = 1000;
+            const startTime = performance.now();
+
+            const numberElements = [
+                document.getElementById('counter_value1'),
+                document.getElementById('counter_value2'),
+                document.getElementById('counter_value3'),
+                document.getElementById('counter_value4')
+            ];
+
+            function animate() {
+                const currentTime = performance.now();
+                const elapsedTime = currentTime - startTime;
+
+                const progress = Math.min(elapsedTime / duration, 1);
+
+                numberElements.forEach((element, index) => {
+                    const currentNumber = Math.round(targets[index] * progress);
+                    element.textContent = currentNumber;
+                });
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    numberElements.forEach((element, index) => {
+                        element.textContent = targets[index];
+                    });
+                }
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+
+    </script>
+    <div class="container">
+        <div class="header">
+            <img src="pic/Logo.svg" alt="logo">
+            <p><a href="">Home</a></p>
+            <p><a href="">About</a></p>
+            <p><a href="">Pages</a></p>
+            <p><a href="">Shop</a></p>
+            <p><a href="">Projects</a></p>
+            <p><a href="">News</a></p>
+            <span>
+                <button>
+                    <img src="pic/Search Icon.svg" alt="search">
+                </button>
+                <button>
+                    <img src="pic/Cart Icon.svg" alt="cart" style="display: inline-block;">
+                </button>
+            </span>
+        </div>
+        <div class="text_health_back" style="">
+            <div class="text_health">
+                <p>100% Natural Food</p>
+                <h1>Choose the best <br>
+                    healthier way <br>
+                    of life</h1>
+                <button>Explore Now</button>
+            </div>
+            <div class="banner">
+                <img src="pic/1.jpg" alt="Natural">
+                <img src="pic/2.jpg" alt="Offer">
+            </div>
+        </div>
+        <div class="text_about">
+            <img src="pic/fru.jpg" alt="">
+            <span>
+                <p>About Us</p>
+                <h1>We Believe in Working <br>
+                    Accredited Farmers</h1>
+                <p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to <br>
+                    been the industry's standard dummy text ever since the 1500s, when an unknown <br>
+                    printer took a galley.</p>
+                <div class="text_about_icon" style="margin-top: 40px;">
+                    <img src="pic/Icon1.jpg" alt="Organic food">
+                    <span>
+                        <h3>Organic Foods Only</h3>
+                        <p>Simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum</p>
+                    </span>
+                </div>
+                <div class="text_about_icon">
+                    <img src="pic/Icon 2.jpg" alt="Organic food">
+                    <span>
+                        <h3>Quality Standards</h3>
+                        <p>Simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum</p>
+                    </span>
+
+                </div>
+                <button>Shop Now</button>
+            </span>
+        </div>
+        <div class="product_text">
+            <p>Categories</p>
+            <h1>Our Products</h1>
+        </div>
+        <div class="product_main" id="targetBlock">
+            <div class="product_hidden" id="referenceBlock">
+                <div class="product">
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/photo_broc.jpg" alt="">
+                        <div>
+                            <h4>Calabrese Broccoli</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$13.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_fresh.jpg" alt="">
+                        <img src="pic/Photo_banana.jpg" alt="">
+                        <div>
+                            <h4>Fresh Banana Fruites</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$14.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_milets.jpg" alt="">
+                        <img src="pic/Photo_nuts.jpg" alt="">
+                        <div>
+                            <h4>White Nuts</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$15.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/photo_bean.jpg" alt="">
+                        <div>
+                            <h4>Vegan Red Tomato</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$17.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product_icon">
+                        <img src="pic/icon_health.jpg" alt="">
+                        <img src="pic/photo_tomato.jpg" alt="">
+                        <div>
+                            <h4>Mung Bean</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$11.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_nuts.jpg" alt="">
+                        <img src="pic/photo_hazelnut.jpg" alt="">
+                        <div>
+                            <h4>Brown Hazelnut</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$12.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="product_icon">
+                        <img src="pic/icon_fresh.jpg" alt="">
+                        <img src="pic/photo_bread.jpg" alt="">
+                        <div>
+                            <h4>Zelco Suji Elaichi Rusk</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$17.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_fresh.jpg" alt="">
+                        <img src="pic/Photo_egg.jpg" alt="">
+                        <div>
+                            <h4>Eggs</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$15.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="product">
+                    <div class="product_icon">
+                        <img src="pic/icon_health.jpg" alt="">
+                        <img src="pic/Photo_cucu.jpg" alt="">
+                        <div>
+                            <h4>Mung Bean</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$11.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_nuts.jpg" alt="">
+                        <img src="pic/Photo_cesh.jpg" alt="">
+                        <div>
+                            <h4>White Hazelnut</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$12.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="product_icon">
+                        <img src="pic/icon_fresh.jpg" alt="">
+                        <img src="pic/Photo_corn.jpg" alt="">
+                        <div>
+                            <h4>Fresh Corn</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$17.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_fresh.jpg" alt="">
+                        <img src="pic/Photo_mind.jpg" alt="">
+                        <div>
+                            <h4>Organic Almonds</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$15.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button class="product_but">Load More</button>
+        <div class="testimonial_back">
+            <div class="testimonial">
+                <p>Testimonial</p>
+                <h2>What Our Customer Saying?</h2>
+                <img src="pic/photo_woman.svg" alt="">
+                <img src="pic/Star.svg" alt="">
+                <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy <br>
+                    text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                <h3>Sara Taylor</h3>
+                <p>Consumer</p>
+                <img src="pic/stars_small.svg" alt="">
+                <div class="okr_group">
+                    <div class="okr">
+                        <span>
+                            <h2 style="display: inline-block;" id="counter_value1">0</h2>
+                            <h2 style="display: inline-block;">%</h2>
+                        </span>
+                        <p>Organic</p>
+                    </div>
+                    <div class="okr">
+                        <span id="counter2">
+                            <h2 id="counter_value2" style="display: inline-block;">0</h2>
+                        </span>
+                        <p>Active product</p>
+
+                    </div>
+                    <div class="okr">
+                        <span id="counter3">
+                            <h2 id="counter_value3" style="display: inline-block;">0</h2>
+                            <h2 style="display: inline-block;">+</h2>
+                        </span>
+                        <p>Organic orchads</p>
+                    </div>
+                    <div class="okr">
+                        <span id="counter4">
+                            <h2 id="counter_value4" style="display: inline-block;">0</h2>
+                            <h2 style="display: inline-block;">+</h2>
+                        </span>
+
+                        <p>Years of</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="offer_back">
+            <div class="offer">
+                <div class="offer_text">
+                    <p>Offer</p>
+                    <span>
+
+                        <h2>We Offer Organic For You</h2>
+                        <button>View All Product</button>
+                    </span>
+
+                </div>
+                <div class="product">
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/Photo_cucu.jpg" alt="">
+                        <div>
+                            <h4>Mung Bean</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$11.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/photo_hazelnut.jpg" alt="" >
+                        <div>
+                            <h4>Brown Hazelnut</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$12.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/Photo_onion.jpg" alt="">
+                        <div>
+                            <h4>Fresh Corn</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$17.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="product_icon">
+                        <img src="pic/icon_veg.png" alt="">
+                        <img src="pic/Photo_cabbage.jpg" alt="">
+                        <div>
+                            <h4>Organic Almonds</h4>
+                            <span>
+                                <h4><span>$20.00 </span>$15.00</h4>
+                                <img src="pic/Star.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="eco_friendly_back">
+            <div class="eco_friendly">
+                <p>Eco Friendly</p>
+                <h2>Econis is a Friendly
+                    Organic Store</h2>
+                <h3>Start with Our Company First</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed
+                    ut perspiciatis.
+                </p>
+                <h3>Learn How to Grow Yourself</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed
+                    ut perspiciatis.</p>
+                <h3>Farming Strategies of Today</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremque laudantium. Sed
+                    ut perspiciatis.</p>
+
+            </div>
+        </div>
+        <div class="organic">
+            <div class="organic_group">
+                <button>
+                    Organic Juice
+                </button>
+                <div class="organic_pic" style=" background-image: url(pic/org_juice_photo.jpg);">
+
+                </div>
+            </div>
+            <div class="organic_group">
+                <button>
+                    Organic Food
+                </button>
+                <div class="organic_pic" style=" background-image: url(pic/org_food_photo.jpg);">
+
+                </div>
+            </div>
+            <div class="organic_group">
+                <button>
+                    Nuts Cookis
+                </button>
+                <div class="organic_pic" style=" background-image: url(pic/nuts_cookies_photo.jpg);">
+
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="news_text" style="">
+                <span>
+                    <p>News</p>
+                    <h2>Discover weekly content about <br>
+                        organic food, & more</h2>
+                </span>
+                <button>More News</button>
+            </div>
+            <div class="news_banners" style="">
+                <div class="news_coluj">
+                    <div class="news_coluj_raund">
+                        <p>25 Nov</p>
+                    </div>
+                    <div class="news_coluj_text">
+                        <img src="pic/icon_human_yel.png" alt="">
+                        <p>By Rachi Card</p>
+                        <h3>The Benefits of Vitamin D & How to Get It</h3>
+                        <p>Simply dummy text of the printing and typesetting <br>
+                            industry. Lorem Ipsum</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+                <div class="news_coluj" style="background-image: url(pic/news_tomat.jpg);">
+                    <div class="news_coluj_raund">
+                        <p>25 Nov</p>
+                    </div>
+                    <div class="news_coluj_text">
+                        <img src="pic/icon_human_yel.png" alt="">
+                        <p>By Rachi Card</p>
+                        <h3>Our Favourite Summertime Tommeto</h3>
+                        <p>Simply dummy text of the printing and typesetting <br>
+                            industry. Lorem Ipsum</p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>
+                <h3>Contact Us</h3>
+                <p>Email</p>
+                <p>needhelp@Organia.com</p>
+                <p>Phone</p>
+                <p>666 888 888</p>
+                <p>Address</p>
+                <p>88 road, borklyn street, USA</p>
+            </span>
+            <span>
+                <img src="pic/Logo.svg" alt="">
+                <p>Simply dummy text of the printing and typesetting industry. <br>
+                    Lorem Ipsum simply dummy text of the printing </p>
+                <img src="pic/footer_media.svg" alt="" style="margin-top: 60px;">
+            </span>
+            <span>
+                <h3>Utility Pages</h3>
+                <p>Style Guide</p>
+                <p>404 Not Found</p>
+                <p>Password Protected</p>
+                <p>Licences</p>
+                <p>Changelog</p>
+            </span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
